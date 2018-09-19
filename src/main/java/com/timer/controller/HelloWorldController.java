@@ -23,7 +23,7 @@ public class HelloWorldController {
 		Car car = new Car("张三的车", 1000000.00, "宝马", 4);
 		Person person = new Person("张三", 32, new SimpleDateFormat("yyyy_MM_dd").parse("1987_08_28"), 
 				"山东省东营市", car);
-		map.put("name", "这是经过模板的页面你没有见过吧");
+		map.put("name", "你没有见过吧");
 		map.put("users", Arrays.asList("张大三","李四","王五","赵六"));
 		map.put("person",person);
 		return "cf/success";
