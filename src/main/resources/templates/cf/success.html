@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>这是成功界面</h1>
+	<div th:text="${name}">这是你看到的初始页</div>
+	<h3 th:each="user:${users}" th:text="${user}"></h3>
+	<hr>
+	<h3>
+		<span th:each="user:${users}">
+			[[${user}]]
+		</span>
+	</h3>
+	<table>
+		<tr th:object="${person}">
+			<td>[[*{personName}]]</td>
+			<td>[[*{personAge}]]</td>
+			<td>[[*{personLocation}]]</td>
+			<td>[[*{personBirth}]]</td>
+			<td>[[*{personCar.brand}]]</td>
+			<td>[[*{personCar.wheels}]]</td>
+			<td>[[*{personCar.carName}]]</td>
+			<td>[[*{personCar.carPrice}]]</td>
+		</tr>
+	</table>
+</body>
+</html>
